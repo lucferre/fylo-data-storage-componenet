@@ -100,12 +100,24 @@
       }
 
       .stats__progress-bar {
+        position: relative;
         display: inline-block;
         width: 100%;
         height: 22.5px;
         border-radius: 10px;
         background-color: #152149;
         border: none;
+      }
+
+      .stats__progress-bar::before {
+        content: "";
+        position: absolute;
+        top: 4.25px;
+        right: 47px;
+        width: 14.5px;
+        height: 14.5px;
+        border-radius: 50%;
+        background-color: #fff;
       }
 
       .stats__progress-bar::-moz-progress-bar {
@@ -127,7 +139,6 @@
       }
 
       .stats__progress-bar::-webkit-progress-value {
-        position: relative;
         margin-top: 2.5px;
         margin-left: 3.25px;
         height: 17.5px;
